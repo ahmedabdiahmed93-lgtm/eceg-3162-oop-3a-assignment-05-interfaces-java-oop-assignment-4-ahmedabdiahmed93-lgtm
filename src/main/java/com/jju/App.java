@@ -6,12 +6,17 @@ import java.util.List;
 public class App 
 {
     public static void main(String[] args) {
-        // Requirement: Use a polymorphic List of the Interface type
+        // Using a polymorphic List of the Interface type
         List<PaymentMethod> cart = new ArrayList<>();
+        cart.add(new CreditCard("8965499676"));
+        cart.add(new PayPal("wowpc@gmail.com"));
 
-        // TODO: Add one CreditCard and one PayPal object to the list
+        // Adding one CreditCard and one PayPal object to the list
         
         System.out.println("--- Checkout Initiated ---");
-        // TODO: Loop through the list and process a payment of 99.99 for each
+        // Looping through the list and processing a payment of 99.99 for each
+        for (PaymentMethod Payment : cart) {
+            Payment.processPayment(99.99);
+        }
     }
 }
