@@ -10,5 +10,6 @@ public class PayPal implements PaymentMethod {
     @Override
     public void processPayment(double amount) {
         // TODO: Print "Redirecting $[amount] to PayPal account: [email]"
+        System.out.println("Redirecting $" + amount + " to PayPal account: " + email);
     }
 }
