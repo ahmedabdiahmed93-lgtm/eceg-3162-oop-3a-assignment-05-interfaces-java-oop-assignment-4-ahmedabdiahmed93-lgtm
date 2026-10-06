@@ -10,5 +10,6 @@ public class CreditCard implements PaymentMethod {
     @Override
     public void processPayment(double amount) {
         // TODO: Print "Charging $[amount] to Card: [cardNumber]"
+        System.out.println("Charging $" + amount + " to Card: " + cardNumber);
     }
 }
